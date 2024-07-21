@@ -1,0 +1,45 @@
+nav {
+    position: fixed;
+}
+
+main {
+    padding: 1.2rem .9rem;
+    padding-top: 4.5rem;
+}
+
+p a {
+    color: #007bff;
+}
+
+p a:visited {
+    color: #007bff;
+}
+
+/* navigation bar styles */
+nav {
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-end;
+    padding: 0 1.8rem;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 1.05rem;
+    }
+
+    main {
+        margin: 1.2rem .9rem;
+    }
+}
