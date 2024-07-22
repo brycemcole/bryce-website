@@ -43,3 +43,14 @@ nav ul {
         margin: 1.2rem .9rem;
     }
 }
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #000;
+    color: #fff;
+  }
+  nav a { 
+    color: #ddd;
+  }
+}
