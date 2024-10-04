@@ -1,5 +1,17 @@
 nav {
     position: fixed;
+    max-width: 600px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+main {
+    width: 100%;
+    max-width: 600px;
 }
 
 main {
@@ -13,6 +25,27 @@ p a {
 
 p a:visited {
     color: #007bff;
+}
+
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.center {
+    align-items: center;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.space-between {
+    justify-content: space-between;
 }
 
 /* navigation bar styles */
@@ -46,11 +79,12 @@ nav ul {
 
 /* dark mode */
 @media (prefers-color-scheme: dark) {
-  body {
-    background: #000;
-    color: #fff;
-  }
-  nav a { 
-    color: #ddd;
-  }
+    body {
+        background: #000;
+        color: #fff;
+    }
+
+    nav a {
+        color: #ddd;
+    }
 }
