@@ -87,4 +87,37 @@ nav ul {
     nav a {
         color: #ddd;
     }
+
+    .snowflake {
+        color: #ddd;
+        opacity: 0.8;
+    }
+}
+
+/* Snowflake effect */
+#snowflake-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: -20px;
+    color: #666;
+    opacity: 0.6;
+    font-family: monospace;
+    user-select: none;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) translateX(var(--drift, 0));
+    }
 }

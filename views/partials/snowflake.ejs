@@ -1,0 +1,39 @@
+<div id="snowflake-container"></div>
+
+<script>
+(function() {
+    const container = document.getElementById('snowflake-container');
+    const snowflakeCount = 50;
+
+    function createSnowflake() {
+        const snowflake = document.createElement('div');
+        snowflake.className = 'snowflake';
+        snowflake.textContent = '*';
+
+        // Random horizontal position
+        snowflake.style.left = Math.random() * 100 + '%';
+
+        // Random animation duration (slower to faster)
+        const duration = Math.random() * 3 + 5; // 5-8 seconds
+        snowflake.style.animationDuration = duration + 's';
+
+        // Random delay so they don't all start at once
+        snowflake.style.animationDelay = Math.random() * 5 + 's';
+
+        // Random size variation
+        const size = Math.random() * 0.5 + 0.8; // 0.8-1.3em
+        snowflake.style.fontSize = size + 'em';
+
+        // Random horizontal drift
+        const drift = (Math.random() - 0.5) * 100; // -50 to 50px
+        snowflake.style.setProperty('--drift', drift + 'px');
+
+        container.appendChild(snowflake);
+    }
+
+    // Create initial snowflakes
+    for (let i = 0; i < snowflakeCount; i++) {
+        createSnowflake();
+    }
+})();
+</script>
